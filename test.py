@@ -10,6 +10,6 @@
 #s = 100000 * (1 + 10) ** x
 #print(round(s))
 
-x = int(input())
-s = 100000 * (1 + 10/100) ** x
-print(round(s))
+#x = int(input())
+#s = 100000 * (1 + 0.1/12) ** (x * 12)
+#print(round(s))
