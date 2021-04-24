@@ -118,7 +118,7 @@ else:
 
 #x = int(input())
 #s = 100000 * (1 + 10) ** x
-#print(round(s))
+##print(round(s))
 
 
 
