@@ -718,6 +718,16 @@
 #     print('ошибка ввода')
 
 
+# for i in range(10):
+#     print('Hello')
+
+# for i in range(5):
+#     num = int(input())
+#     print('Квадрат вашего числа равен:', num * num)
+# print('Цикл завершен')
+
+
+
 '''Программа должна вывести на экран границы отрезка, 
 являющегося пересечением, либо общую точку, либо 
 текст «пустое множество».'''
@@ -921,3 +931,669 @@
 # m = int(input())
 # for i in range(m):
 #     print(Cities[input()])
+
+
+# Дано положительное действительное число. Выведите его дробную часть.
+# print(float('0.' + input().split('.')[1][::]))
+
+# Напишите программу, которая упорядочивает три числа от большего к меньшему.
+# a, b, c, d, e = int(input()), int(input()), int(input()), int(input()), int(input())
+# max_digit = max(a, b, c, d, e)
+# min_digit = min(a, b, c, d, e)
+# print(f'Наименьшее число = {min_digit}')
+# print(f'Наибольшее число = {max_digit}')
+
+# from math import sin, cos, tan, radians
+# x = radians(float(input()))
+# print(sin(x) + cos(x) + tan(x) ** 2)
+
+# from math import sqrt
+# a, b, c = float(input()), float(input()), float(input())
+# a != 0
+# D = b ** 2 - 4 * a * c
+# if D < 0:
+#     print('Нет корней')
+# else:
+#     x1 = (-b + sqrt(D)) / (2 ** a)
+#     x2 = (-b - sqrt(D)) / (2 ** a)
+#
+# print(min(x1, x2))
+# print(max(x1, x2))
+
+
+# Напишите программу, которая находит вещественные корни квадратного уравнения
+# from math import sqrt
+# a, b, c = float(input()), float(input()), float(input())
+# D = (b ** 2) - (4 * a * c)
+# if D < 0:
+#     print('Нет корней')
+# elif D == 0:
+#     print(-b / (2 * a))
+# else:
+#     x1 = (-b + sqrt(D)) / (2 * a)
+#     x2 = (-b - sqrt(D)) / (2 * a)
+#     print(min(x1, x2))
+#     print(max(x1, x2))
+
+# Напишите программу, которая находит площадь указанного правильного многоугольника.
+# from math import tan, pi
+# n, a = float(input()), float(input())
+# print((n * a ** 2) / (4 * tan(pi / n)))
+
+# на вход названия городов узнак мин и мак длин городов
+# str1, str2, str3 = input(), input(), input()
+# print(min(str1, str2, str3, key=len))
+# print(max(str1, str2, str3, key=len))
+#
+#
+# Напишите программу, которая выясняет можно ли из
+# длин этих строк построить возрастающую арифметическую прогрессию.
+# a, b, c = input(), input(), input()
+# max_digit = max(a, b, c, key=len)
+# min_digit = min(a, b, c, key=len)
+# avarege = len(a) + len(b) + len(c) - (len(max_digit) + len(min_digit) )
+# if (len(max_digit) + len(min_digit)) / 2 == avarege:
+#     print('YES')
+# else:
+#     print('NO')
+#2 вариант по формуле прогрессии
+# a, b, c = len(input()), len(input()), len(input())
+# print('YES' if (b * 2 - c - a) * (c * 2 - b - a) * (a * 2 - b - c) == 0 else 'NO')
+
+# s = input()
+# if len(s) == 1 and s in 'aeiou':
+#     print('YES')
+# else:
+#     print('NO')
+
+#поиск "синий" в строке
+# s = input()
+# if 'синий' in s:
+#     print('YES')
+# else:
+#     print('NO')
+
+# вариант 2
+# s = input()
+# print('YES' if 'синий' in s else 'NO')
+
+
+
+# s = input()
+# if 'суббота' in s:
+#     print('YES')
+# elif 'воскресенье' in s:
+#     print('YES')
+# else:
+#     print('NO')
+
+
+# s = input()
+# if 'суббота' in s or 'воскресенье' in s:
+#     print('YES')
+# else:
+#     print('NO')
+
+# Напишите программу проверяющую корректность email адреса.
+# s = input()
+# if '@' in s:
+#     if '.' in s:
+#         print('YES')
+#     else:
+#         print('NO')
+# else:
+#     print('NO')
+
+# 2 вариант
+# s = input()
+# if '@' in s and '.' in s:
+#     print('YES')
+# else:
+#     print('NO')
+
+# цикл for с input()
+# for i in range(5):
+#     num = int(input())
+#     print('Квадрат вашего числа равен:', num * num)
+# print('Цикл завершен')
+
+# a, b = input(), int(input())
+# for i in range(b):
+#     print(a)
+
+# n = int(input())
+# for i in range(n):
+#     print('*' * 19)
+
+# Напишите программу, которая выводит
+# звездный треугольник в соответствии с примером.
+# n = int(input())
+# for i in range(n):
+#     n -= 1
+#     print('*' * (n + 1))
+# второй вариант
+# n = int(input())
+# for i in range(n):
+#     print('*' * (n - i))
+
+'''На вход программе подается три 
+натуральных числа m, \, p, \, nm,p,n:
+
+m:m: стартовое количество организмов;
+p:p: среднесуточное увеличение в %;
+n:n: количество дней для размножения.
+Напишите программу, которая предсказывает 
+размер популяции организмов. Программа должна 
+выводить размер популяции в каждый день, начиная 
+с 11 и заканчивая nn-м днем.'''
+# m, p, n = int(input()), int(input()), int(input())
+# for i in range(n):
+#     print(i + 1, float(m))
+#     m += m * p / 100
+
+# второй вариант
+# m, p, n = int(input()), int(input()), int(input())
+# for i in range(n):
+#     print(m * (p / 100 + 1) ** i)
+
+
+# range с 3 параметрами
+# for i in range (56, 171, 2):
+#     print(i)
+# 2 вариант
+# for i in range(56, 171):
+#     if i % 2 == 0:
+#         print(i)
+
+# for i in range(5, 0, -1):
+#     print(i, end=' ')
+# print('Взлетаем!!!')
+
+
+# Даны два целых числа mm и nn. Напишите программу, которая
+# выводит все числа от mm до nn включительно в порядке
+# возрастания, если m < nm<n, или в порядке убывания в противном случае.
+# m, n = int(input()), int(input())
+# if m < n:
+#     n, m = m, n
+#     for i in range(n, m + 1):
+#         print(i)
+# elif m > n:
+#     n, m = m, n
+#     for i in range(n, m - 1, -1):
+#         print(i)
+# elif m == n:
+#     print(m or n)
+
+# Даны два целых числа mm и nn (m > nm>n). Напишите
+# программу, которая выводит все нечетные числа от
+# mm до nn включительно в порядке убывания.
+# m, n = int(input()), int(input())
+# for i in range(m, n - 1, -1):
+#     if i % 2 == 1:
+#         print(i)
+
+# вариант 2
+# m, n = int(input()), int(input())
+# m = m % 2 - 1 + m #как из четного сделать не четное
+# for i in range(m, n, -2):
+#     print(i)
+
+# m, n = int(input()), int(input())
+# for i in range(m, n + 1):
+#     if i % 17 == 0 or i % 10 == 9 or i % 3 == 0 and i % 5 == 0: #можно попробовать i % 15 == 0
+#         print(i)
+
+# Дано натуральное число n. Напишите программу,
+# которая выводит таблицу умножения на n.
+# n = int(input())
+# for i in range(1, 11):
+#     print(f'{n} x {i} = {i * n}')
+
+# counter1 = 0
+# counter2 = 0
+# for i in range(5):
+#     num = int(input())
+#     if num > 10:
+#         counter1 += 1
+#     if num == 0:
+#         counter2 += 1
+# print('Было введено', counter1, 'чисел, больших 10.')
+# print('Было введено', counter2, 'нулей.')
+
+# Рассмотрим еще один пример: подсчитать количество чисел
+# из диапазона [1;100], квадрат которых оканчивается на 4.
+# counter = 0
+# for i in range(1, 101):
+#     if i**2 % 10 == 4:
+#         counter += 1
+# print(counter)
+
+# total = 0
+# for i in range(5):
+#     num = int(input())
+#     if num > 10:
+#         total += num
+# print('Сумма чисел больших 10 равна', total)
+
+# Напишем программу, которая считает
+# сумму натуральных чисел от 1 до 100:
+# total = 0
+# for i in range(1, 101):
+#     total = total + i
+# print('Сумма равна', total)
+
+# напишем программу, которая запрашивает 10
+# целых чисел и находит их среднее значение:
+# total = 0
+# for i in range(5):
+#     num = int(input())
+#     total += num
+# average = total / 5
+# print('Среднее значение равно', average)
+
+
+
+# Напишем программу, определяющую,
+# что натуральное число является простым:
+# num = int(input())
+# flag = True
+#
+# for i in range(2, num):
+#     if num % i == 0:
+#         flag = False
+#
+# if num != 1 and flag == True:
+#     print('Число простое')
+# else:
+#     print('Число состовное')
+
+
+# Напишем программу, которая считывает
+# 5 положительных чисел и находит среди них наибольшее число.
+# largest = -1
+# for i in range(5):
+#     num = int(input())
+#     if num > largest:
+#         largest = num
+# print('Наибольшее число равно', largest)
+
+# Напишем программу, которая считывает 5
+# чисел (необязательно положительных) и находит среди них наибольшее:
+# largest = int(input())
+# for i in range(4):
+#     num = int(input())
+#     if num > largest:
+#         largest = num
+# print('Наибольшее число равно', largest)
+
+
+# total = 0
+# for i in range(1, 6):
+#     total += i
+#     print(total, end='') #ответ 1361015
+
+# Напишите программу, которая подсчитывает
+# количество чисел в диапазоне от aa до bb
+# включительно, куб которых оканчивается на 44 или 99.
+# total = 0
+# a, b = int(input()), int(input())
+# for i in range(a, b + 1):
+#     if i ** 3 % 10 == 4:
+#         total += 1
+#     if i ** 3 % 10 == 9:
+#         total += 1
+# print(total)
+
+# Напишите программу, которая
+# подсчитывает сумму введенных чисел.
+# n = int(input())
+# total = 0
+# for i in range(n):
+#     n = int(input())
+#     total += n
+# print(total)
+
+
+
+# На вход программе подается натуральное число n.
+# Напишите программу, которая вычисляет значение выражения
+# from math import log
+# n = int(input())
+# total = 0
+# for i in range(1, n + 1):
+#     i = 1 / i
+#     total += i
+# print(total - log(n))
+
+# Напишите программу, которая подсчитывает
+# сумму тех чисел от 11 до nn (включительно)
+# квадрат которых оканчивается на 2, \, 52,5 или 88.
+# n = int(input())
+# counter = 0
+# for i in range(1, n + 1):
+#     if i ** 2 % 10 == 2:
+#         counter += i
+#     if i ** 2 % 10 == 5:
+#         counter += i
+#     if i ** 2 % 10 == 8:
+#         counter += i
+# print(counter)
+
+# На вход программе подается натуральное
+# число n. Напишите программу, которая вычисляет n!
+# n = int(input())
+# counter = 1
+# for i in range(2, n + 1):
+#     counter *= i
+# print(counter)
+
+# 2 вариант
+# from math import factorial
+# n = int(input())
+# print(factorial(n))
+
+# Напишите программу, которая считывает
+# 10 чисел и выводит произведение отличных от нуля чисел.
+# counter = 1
+# for i in range(10):
+#     n = int(input())
+#     if n > 0:
+#         counter *= n
+# print(counter)
+
+# Напишите программу, которая
+# вычисляет сумму всех его делителей.
+# counter = 0
+# n = int(input())
+# for i in range(1, n + 1):
+#     if n % i == 0:
+#         counter += i
+# print(counter)
+
+# Напишите программу вычисления знакочередующей суммы
+# n = int(input())
+# counter = 0
+# for i in range(1, n +1):
+#     if i % 2 == 0:
+#         counter -= i
+#     if i % 2 == 1:
+#         counter += i
+# print(counter)
+
+# 2 вариант
+# n = int(input())
+# total = 0
+# for i in range(n):
+#     total += (i + 1) * (- 1) ** i
+# print(total)
+
+
+# На вход программе подается натуральное число nn, а затем nn
+# различных натуральных чисел, каждое на отдельной строке.
+# Напишите программу, которая выводит наибольшее и второе
+# наибольшее число последовательности.
+# n = int(input())
+# largest = 0
+# prelargest = 0
+# for i in range(1, n + 1):
+#     a = int(input())
+#     if a < prelargest and a < largest:
+#         largest = largest
+#         prelargest = prelargest
+#     if prelargest < a < largest:
+#         prelargest = a
+#     if a > prelargest and a > largest:
+#         prelargest = largest
+#         largest = a
+# print(largest)
+# print(prelargest)
+
+# Напишите программу, которая считывает последовательность
+# из 10 целых чисел и определяет является ли каждое из них
+# четным или нет.
+# counter = 0
+# for i in range(10):
+#     n = int(input())
+#     if n % 2 == 0:
+#         counter += 1
+# if counter == 10:
+#     print('YES')
+# else:
+#     print('NO')
+
+# 2 вариант
+# flag = True
+# for i in range(3):
+#     n = int(input())
+#     if n % 2 == 1:
+#         flag = False
+# if flag: #flag == True
+#     print('YES')
+# else:
+#     print('NO')
+#
+# 3 вариант с флагом
+#
+# flag = 'YES'
+# for _ in range(10):
+#     n = int(input())
+#     if a % 2 != 0:
+#         flag = 'NO'
+# print(flag)
+
+# Напишите программу, которая считывает натуральное число n
+# и выводит первые nn чисел последовательности Фибоначчи.
+# n = int(input())
+# previous = 0 # previous = real = 0
+# real = 0
+# for i in range(1, n + 1):
+#     if i <= 2:
+#         n = 1
+#         previous = 1
+#         real = 1
+#     if i > 2:
+#         n = previous + real
+#         previous = real
+#         real = n
+#     print(n, end=' ')
+
+# 2 решение
+# n = int(input())
+# a, b = 1, 1
+# for i in range(n):
+#     print(a, end=' ')
+#     a, b = b, a + b
+
+
+# num = int(input())
+# while num != -1:
+#     print('Квадрат вашего числа равен:', num * num)
+#     num = int(input())
+
+# Напишем программу, которая считывает числа и находит их
+# сумму, до тех пор пока пользователь не введет слово stop
+# text = input()
+# total = 0
+# while text != 'stop':
+#     num = int(text)
+#     total += num
+#     text = input()
+# print('Сумма чисел равна', total)
+
+# Напишите программу, которая выводит члены последовательности.
+# a = input()
+# while a != 'КОНЕЦ' and a != 'конец':
+#     print(a)
+#     a = input()
+
+
+# Напишите программу, которая выводит общее количество
+# членов данной последовательности.
+# total = 0
+# a = input()
+# while a != 'стоп' and a != 'хватит' and a != 'достаточно':
+#     total += 1
+#     a = input()
+# print(total)
+#
+# 2 вариант
+# a, total = input(), 0
+# while a not in ('стоп', 'хватит', 'достаточно'):
+#     total += 1
+#     a = input()
+# print(total)
+
+# Концом последовательности является любое число не делящееся
+# на 7. Напишите программу, которая выводит члены
+# данной последовательности.
+# a = input()
+# while int(a) % 7 == 0:
+#     print(a)
+#     a = input()
+
+
+# На вход программе подается последовательность целых чисел,
+# каждое число на отдельной строке. Концом последовательности
+# является любое отрицательное число. Напишите программу, которая
+# выводит сумму всех членов данной последовательности.
+# total = 0
+# a = input()
+# while int(a) >= 0:
+#     total += int(a)
+#     a = input()
+# print(total)
+
+
+# На вход программе подается последовательность целых чисел от 1 до 5,
+# характеризующее оценку ученика, каждое число на отдельной строке.
+# Концом последовательности является любое отрицательное число, либо число
+# большее 5. Напишите программу, которая выводит количество пятерок.
+# a, total = input(), 0
+# while 0 < int(a) < 6:
+#     # b = int(a) % 5 == 0
+#     total += int(a) % 5 == 0
+#     a = input()
+# print(total)
+
+# a = input()
+# while a != 'end':
+#     a = int(a) ** 2
+#     print(a)
+#     a = input()
+#
+# дано число x вывести квадрат его цифр в обратном порядке
+# x = int(input())
+# while x:
+#     digit = x % 10
+#     print(digit ** 2)
+#     x //= 10
+
+# найти количество цифр 1 в его двоичной записи
+# s = 0
+# x = int(input())
+# while x > 0:
+#     binDigit = x % 2
+#     s += binDigit
+#     x //= 2
+# print(s)
+
+# получить сумму квадратов
+# n = int(input())
+# s = 0
+# for x in range(1, n + 1):
+#     s += x ** 2
+# print(s)
+
+# факториал
+# N = int(input())
+# factorial = 1
+# for x in range(1, N+1):
+#     factorial *= x
+# print(factorial)
+
+# поиск возможных делителей
+# x = int(input())
+# for delitel in range(1, x + 1):
+#     if x % delitel == 0:
+#         print(delitel, end=' ')
+
+# выводит число в обратном порядке
+# n = int(input())
+# while n > 0:
+#     digit = n%10
+#     print(digit, end='')
+#     n //= 10
+# print()
+
+
+# вывести максимум и минимум числа #179 1 9
+# n = int(input())
+# minDigit = 10
+# maxDigit = -1
+# while n > 0:
+#     digit = n % 10
+#     minDigit = min(minDigit, digit)
+#     maxDigit = max(maxDigit, digit)
+#     n //= 10
+# print(minDigit, maxDigit)
+
+# n = 5
+# while n > 0:
+#     n -= 1
+#     if n == 2:
+#         break
+#     print(n)
+# print('hello')
+
+# a = ['foo', 'bar', 'baz', 'qux']
+# while True:
+#     if not a:
+#         break
+#     print(a.pop(-1))
+
+# ответ 3foo3bar1foo1bar
+# s = ''
+#
+# n = 5
+# while n > 0:
+#     n -= 1
+#     if (n % 2) == 0:
+#         continue
+#
+#     a = ['foo', 'bar', 'baz']
+#     while a:
+#         s += str(n) + a.pop(0)
+#         if len(a) < 2:
+#             break
+# print(s)
+
+
+# a = ['test', 'test1']
+# a.clear()
+# print(a)
+
+# a = ['foo', 'bar', 'baz']
+# for i in a:
+#     print(i)
+
+
+# captains = ['Janeway', 'Picard', 'Sisko']
+#
+# for i in range(len(captains)):
+#     print(captains[i])
+
+# NumPy - это сторонняя библиотека Python.
+# import numpy as np
+# for i in np.arange(0.3, 1.6, 0.3):
+#     print(i)
+
+# import numpy as np
+# print(np.linspace(1, 10, 10))
+
+
+
+
+
+
+
